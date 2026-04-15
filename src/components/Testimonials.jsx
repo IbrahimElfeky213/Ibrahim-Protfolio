@@ -107,7 +107,7 @@ export default function Testimonials() {
         {/* LinkedIn link */}
         <AnimatedSection className="mt-12 text-center">
           <a
-            href="https://linkedin.com/in/ibrahimelfeky"
+            href="https://www.linkedin.com/in/ibrahimelfeky21/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-muted hover:text-white text-sm transition-colors"

@@ -6,8 +6,8 @@ import AnimatedSection from '../components/AnimatedSection'
 const contactInfo = [
   {
     label: 'Email',
-    value: 'ibrahim.elfeky@gmail.com',
-    href: 'mailto:ibrahim.elfeky@gmail.com',
+    value: 'ibrahim.elfeky21@gmail.com',
+    href: 'mailto:ibrahim.elfeky21@gmail.com',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path d="M2 5l8 6 8-6M2 5h16v10H2V5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -38,9 +38,11 @@ const contactInfo = [
 ]
 
 const quickLinks = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/ibrahimelfeky' },
-  { label: 'Behance', href: 'https://behance.net/ibrahimelfeky' },
-  { label: 'Dribbble', href: 'https://dribbble.com/ibrahimelfeky' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ibrahimelfeky21/' },
+  { label: 'Behance', href: 'https://www.behance.net/ibrahimelfeky' },
+  { label: 'Dribbble', href: 'https://dribbble.com/Ibrahimelfeky21' },
+  { label: 'PDF Portfolio', href: 'https://drive.google.com/file/d/1AMHnUeRJQJkdc28ijheEBdBd1KVN3FRF/view?usp=drive_link' },
+  { label: 'Resume', href: 'https://drive.google.com/file/d/1zxz4lGanMIX1hKwoql02lBueWvBW6oB-/view?usp=sharing' },
 ]
 
 export default function Contact() {

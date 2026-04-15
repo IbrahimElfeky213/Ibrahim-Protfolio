@@ -64,7 +64,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <a
-            href="mailto:ibrahim.elfeky@gmail.com"
+            href="mailto:ibrahim.elfeky21@gmail.com"
             className="ml-4 px-5 py-2 bg-accent text-white rounded-full text-sm font-semibold transition-all duration-300 hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(232,120,74,0.35)]"
           >
             Hire Me
@@ -134,7 +134,7 @@ export default function Navbar() {
                 className="pt-2"
               >
                 <a
-                  href="mailto:ibrahim.elfeky@gmail.com"
+                  href="mailto:ibrahim.elfeky21@gmail.com"
                   className="block text-center px-5 py-3 bg-accent text-white rounded-xl text-sm font-semibold"
                 >
                   Hire Me

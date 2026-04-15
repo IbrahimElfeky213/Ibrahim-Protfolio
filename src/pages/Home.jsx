@@ -209,14 +209,14 @@ export default function Home() {
               Let's create something remarkable together.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="mailto:ibrahim.elfeky@gmail.com" className="btn-primary">
+              <a href="mailto:ibrahim.elfeky21@gmail.com" className="btn-primary">
                 Get In Touch
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M2 4l6 5 6-5M2 4h12v8H2V4z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/in/ibrahimelfeky"
+                href="https://www.linkedin.com/in/ibrahimelfeky21/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"

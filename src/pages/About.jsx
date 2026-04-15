@@ -95,11 +95,35 @@ export default function About() {
                 both the user's need and the technical constraints, allowing me to design solutions
                 that are not only beautiful but actually buildable.
               </p>
-              <p className="text-muted text-lg leading-relaxed">
+              <p className="text-muted text-lg leading-relaxed mb-8">
                 I thrive on complexity — whether managing 8 user roles on a government platform,
                 building a design system from scratch, or turning a confusing user journey into
                 something that just works.
               </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://drive.google.com/file/d/1AMHnUeRJQJkdc28ijheEBdBd1KVN3FRF/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2v8M4 7l4 4 4-4M2 12h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  PDF Portfolio
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1zxz4lGanMIX1hKwoql02lBueWvBW6oB-/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2v8M4 7l4 4 4-4M2 12h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  Resume
+                </a>
+              </div>
             </div>
 
             <div className="relative">

@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 
 const socials = [
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/ibrahimelfeky' },
-  { label: 'Behance', href: 'https://behance.net/ibrahimelfeky' },
-  { label: 'Dribbble', href: 'https://dribbble.com/ibrahimelfeky' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ibrahimelfeky21/' },
+  { label: 'Behance', href: 'https://www.behance.net/ibrahimelfeky' },
+  { label: 'Dribbble', href: 'https://dribbble.com/Ibrahimelfeky21' },
+  { label: 'PDF Portfolio', href: 'https://drive.google.com/file/d/1AMHnUeRJQJkdc28ijheEBdBd1KVN3FRF/view?usp=drive_link' },
+  { label: 'Resume', href: 'https://drive.google.com/file/d/1zxz4lGanMIX1hKwoql02lBueWvBW6oB-/view?usp=sharing' },
 ]
 
 const navLinks = [
@@ -65,7 +67,7 @@ export default function Footer() {
                 ))}
                 <li>
                   <a
-                    href="mailto:ibrahim.elfeky@gmail.com"
+                    href="mailto:ibrahim.elfeky21@gmail.com"
                     className="text-dim hover:text-white text-sm transition-colors"
                   >
                     Email
