@@ -4,8 +4,6 @@ const socials = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ibrahimelfeky21/' },
   { label: 'Behance', href: 'https://www.behance.net/ibrahimelfeky' },
   { label: 'Dribbble', href: 'https://dribbble.com/Ibrahimelfeky21' },
-  { label: 'PDF Portfolio', href: 'https://drive.google.com/file/d/1AMHnUeRJQJkdc28ijheEBdBd1KVN3FRF/view?usp=drive_link' },
-  { label: 'Resume', href: 'https://drive.google.com/file/d/1zxz4lGanMIX1hKwoql02lBueWvBW6oB-/view?usp=sharing' },
 ]
 
 const navLinks = [
@@ -65,14 +63,6 @@ export default function Footer() {
                     </a>
                   </li>
                 ))}
-                <li>
-                  <a
-                    href="mailto:ibrahim.elfeky21@gmail.com"
-                    className="text-dim hover:text-white text-sm transition-colors"
-                  >
-                    Email
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
@@ -80,7 +70,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-dim text-xs">© 2025 Ibrahim Elfeky. All rights reserved.</p>
+          <p className="text-dim text-xs">© 2026 Ibrahim Elfeky. All rights reserved.</p>
           <p className="text-dim text-xs">
             Designed & built with{' '}
             <span className="text-accent">♥</span>
