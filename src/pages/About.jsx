@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
 import AnimatedSection from '../components/AnimatedSection'
 import profileImg from '../assets/images/profile.jpg'
+import Testimonials from '../components/Testimonials'
 
 const experience = [
   {
@@ -236,6 +237,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <Testimonials />
     </PageTransition>
   )
 }

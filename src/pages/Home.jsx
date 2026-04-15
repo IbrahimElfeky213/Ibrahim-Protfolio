@@ -7,6 +7,7 @@ import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
 import profileImg from '../assets/images/profile.jpg'
 import heroShape from '../assets/images/hero-shape.png'
+import Testimonials from '../components/Testimonials'
 
 const stats = [
   { value: '6+', label: 'Years Experience' },
@@ -191,6 +192,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── TESTIMONIALS ──────────────────────────────── */}
+      <Testimonials />
 
       {/* ─── CTA ───────────────────────────────────────── */}
       <section className="py-28 border-t border-white/[0.06]">
