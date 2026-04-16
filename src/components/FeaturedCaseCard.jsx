@@ -14,12 +14,12 @@ export default function FeaturedCaseCard({ project, index = 0 }) {
     >
       <Link to={`/projects/${slug}`} className="block group">
         <div
-          className="grid lg:grid-cols-2 rounded-3xl overflow-hidden border border-white/[0.07] hover:border-white/[0.18] transition-all duration-500"
-          style={{ background: '#141414', minHeight: '420px' }}
+          className="grid lg:grid-cols-2 lg:h-[540px] rounded-3xl overflow-hidden border border-white/[0.07] hover:border-white/[0.18] transition-all duration-500"
+          style={{ background: '#141414' }}
         >
           {/* ── Text Content ── */}
           <div
-            className={`flex flex-col justify-center px-10 py-12 md:px-14 md:py-14 ${
+            className={`flex flex-col justify-center px-10 py-8 md:px-12 md:py-10 overflow-hidden ${
               isReversed ? 'lg:order-2' : 'lg:order-1'
             }`}
           >
@@ -83,7 +83,7 @@ export default function FeaturedCaseCard({ project, index = 0 }) {
 
           {/* ── Image / Placeholder ── */}
           <div
-            className={`relative overflow-hidden min-h-[280px] lg:min-h-0 ${
+            className={`relative overflow-hidden min-h-[260px] lg:min-h-0 lg:h-full ${
               isReversed ? 'lg:order-1' : 'lg:order-2'
             }`}
           >

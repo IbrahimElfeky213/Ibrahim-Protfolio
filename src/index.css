@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  * { cursor: none !important; }
+  @media (hover: hover) and (pointer: fine) {
+    * { cursor: none !important; }
+  }
 
   body {
     @apply bg-bg text-white font-sans overflow-x-hidden;
@@ -88,4 +90,17 @@
   background: linear-gradient(90deg, #1a1a1a 25%, #252525 50%, #1a1a1a 75%);
   background-size: 1000px 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* Testimonials marquee — scrolls right */
+.marquee-right-track {
+  width: max-content;
+  animation: marquee-right 45s linear infinite;
+}
+.marquee-right-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
 }

@@ -6,8 +6,13 @@ export default function Cursor() {
   const [follower, setFollower] = useState({ x: -100, y: -100 })
   const [isHovering, setIsHovering] = useState(false)
   const [isClicking, setIsClicking] = useState(false)
+  const [isPointer, setIsPointer] = useState(false)
 
   useEffect(() => {
+    const mq = window.matchMedia('(hover: hover) and (pointer: fine)')
+    setIsPointer(mq.matches)
+    if (!mq.matches) return
+
     const onMove = (e) => setPos({ x: e.clientX, y: e.clientY })
     window.addEventListener('mousemove', onMove)
 
@@ -52,6 +57,8 @@ export default function Cursor() {
       observer.disconnect()
     }
   }, [])
+
+  if (!isPointer) return null
 
   return (
     <>
