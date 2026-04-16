@@ -4,6 +4,7 @@ import PageTransition from '../components/PageTransition'
 import AnimatedSection from '../components/AnimatedSection'
 import StatCounter from '../components/StatCounter'
 import ProjectCard from '../components/ProjectCard'
+import FeaturedCaseCard from '../components/FeaturedCaseCard'
 import { projects } from '../data/projects'
 import profileImg from '../assets/images/profile.jpg'
 import heroShape from '../assets/images/hero-shape.png'
@@ -22,7 +23,7 @@ const skills = [
   'Design Tokens', 'Accessibility', 'Agile / Scrum', 'Handoff',
 ]
 
-const featured = projects.slice(0, 3)
+const featured = projects.slice(0, 4)
 
 export default function Home() {
   return (
@@ -124,11 +125,11 @@ export default function Home() {
       {/* ─── FEATURED WORK ─────────────────────────────── */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <AnimatedSection className="flex items-end justify-between mb-12 gap-6 flex-wrap">
+          <AnimatedSection className="flex items-end justify-between mb-14 gap-6 flex-wrap">
             <div>
               <div className="section-label">Selected Work</div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-                Featured Projects
+                Selected Cases
               </h2>
             </div>
             <Link to="/work" className="btn-secondary text-sm">
@@ -139,9 +140,9 @@ export default function Home() {
             </Link>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-col gap-5">
             {featured.map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
+              <FeaturedCaseCard key={project.id} project={project} index={i} />
             ))}
           </div>
         </div>
