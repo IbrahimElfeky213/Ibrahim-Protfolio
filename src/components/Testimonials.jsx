@@ -1,4 +1,9 @@
 import AnimatedSection from './AnimatedSection'
+import imgZiad from '../assets/images/ziad-khaled.png'
+import imgNourhan from '../assets/images/nourhan-elkomi.jpg'
+import imgDeyaa from '../assets/images/deyaa-eldeen.jpg'
+import imgBassel from '../assets/images/bassel-mahdy.png'
+import imgAhmed from '../assets/images/ahmed-mealy.jpeg'
 
 const testimonials = [
   {
@@ -6,7 +11,7 @@ const testimonials = [
     title: 'Senior Software Engineer · Mobile Team Lead',
     gender: 'male',
     date: 'Dec 2024',
-    image: 'https://i.pravatar.cc/80?img=11',
+    image: imgZiad,
     text: "I had the privilege of working alongside Ibrahim for two years, and I can confidently say that he is one of the most talented Product Designers I've ever collaborated with. His creativity, attention to detail, and user-centered approach have significantly contributed to the success of our projects. His collaborative spirit, professionalism, and genuine kindness make him a joy to work with.",
   },
   {
@@ -14,7 +19,7 @@ const testimonials = [
     title: 'Product Designer',
     gender: 'female',
     date: 'Feb 2023',
-    image: 'https://i.pravatar.cc/80?img=44',
+    image: imgNourhan,
     text: "I highly recommend Ibrahim for his exceptional UI design skills. He has a natural talent for creating beautiful and intuitive user interfaces that effectively communicate a brand's message. What sets him apart is his ability to not only create aesthetically pleasing designs, but also to consider the functionality and user experience of the product. Ibrahim is an asset to any team.",
   },
   {
@@ -22,7 +27,7 @@ const testimonials = [
     title: 'UX/UI Team Lead · 6+ Years in UX/UI Design',
     gender: 'male',
     date: 'Jan 2023',
-    image: 'https://i.pravatar.cc/80?img=68',
+    image: imgDeyaa,
     text: "Ibrahim has a natural talent for understanding user needs and creating designs that not only look good but are also functional and user-friendly. He is a team player and is always willing to go the extra mile to ensure that the end product meets the highest standards. I highly recommend Ibrahim for any Product Design role.",
   },
   {
@@ -30,7 +35,7 @@ const testimonials = [
     title: 'UX Lead · Al Rajhi Capital',
     gender: 'male',
     date: 'Jan 2023',
-    image: 'https://i.pravatar.cc/80?img=32',
+    image: imgBassel,
     text: "Ibrahim is a talented and dedicated Product Designer with a strong passion for creating intuitive and visually stunning designs. I have had the pleasure of working with him on several projects, and was consistently impressed by his ability to take a project from concept to completion with minimal guidance.",
   },
   {
@@ -38,7 +43,7 @@ const testimonials = [
     title: 'Senior Product Designer · webook.com',
     gender: 'male',
     date: 'Dec 2022',
-    image: 'https://i.pravatar.cc/80?img=52',
+    image: imgAhmed,
     text: "We collaborated on many projects. He is always willing to share best practices, very committed and focused on delivering on time. He is a top performer who seeks to improve himself and always stays up to date with the latest technologies. I enjoyed working with him — highly recommended.",
   },
   {
