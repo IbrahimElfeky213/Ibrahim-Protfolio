@@ -62,61 +62,61 @@ const certifications = [
   {
     title: 'UX Advanced Nanodegree',
     org: 'Udacity',
-    year: '2024',
+    logo: 'https://logo.clearbit.com/udacity.com',
     link: 'https://www.udacity.com/course/ux-designer-nanodegree--nd578',
   },
   {
     title: 'Google UX Design Specialization',
     org: 'Google / Coursera',
-    year: '2023',
+    logo: 'https://logo.clearbit.com/coursera.org',
     link: 'https://www.coursera.org/professional-certificates/google-ux-design',
   },
   {
     title: 'Product Designer Certification',
     org: 'Uxcel',
-    year: '2023',
+    logo: 'https://logo.clearbit.com/uxcel.com',
     link: 'https://uxcel.com/certifications/product-designer',
   },
   {
     title: 'UX/UI Designer Certification',
     org: 'Uxcel',
-    year: '2023',
+    logo: 'https://logo.clearbit.com/uxcel.com',
     link: 'https://uxcel.com/certifications/ux-ui-designer',
   },
   {
     title: 'UX Writer Certification',
     org: 'Uxcel',
-    year: '2023',
+    logo: 'https://logo.clearbit.com/uxcel.com',
     link: 'https://uxcel.com/certifications/ux-writer',
   },
   {
     title: 'Product Discovery',
     org: 'Uxcel',
-    year: '2022',
+    logo: 'https://logo.clearbit.com/uxcel.com',
     link: 'https://uxcel.com/',
   },
   {
     title: 'Customer Experience Certification',
     org: 'CX Academy',
-    year: '2023',
+    logo: 'https://logo.clearbit.com/cxacademy.online',
     link: 'https://cxacademy.online/',
   },
   {
     title: 'McKinsey Forward Program',
     org: 'McKinsey & Company',
-    year: '2023',
+    logo: 'https://logo.clearbit.com/mckinsey.com',
     link: 'https://www.mckinsey.com/forward/overview',
   },
   {
     title: 'Product Strategy',
     org: 'Product School',
-    year: '2022',
+    logo: 'https://logo.clearbit.com/productschool.com',
     link: 'https://productschool.com/',
   },
   {
     title: 'Effective Leadership',
     org: 'HP Life',
-    year: '2022',
+    logo: 'https://logo.clearbit.com/life-global.org',
     link: 'https://www.life-global.org/',
   },
 ]
@@ -309,16 +309,22 @@ export default function About() {
                         rel="noopener noreferrer"
                         className="bg-bg-2 border border-white/[0.08] rounded-xl p-5 flex items-start gap-4 hover:border-accent/40 hover:bg-accent/[0.03] transition-all duration-200 group"
                       >
-                        <div
-                          className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-bold text-sm"
-                          style={{ background: 'rgba(232,120,74,0.15)', color: '#E8784A' }}
-                        >
-                          {cert.year.slice(-2)}
+                        <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden bg-white/[0.06]">
+                          <img
+                            src={cert.logo}
+                            alt={cert.org}
+                            className="w-7 h-7 object-contain"
+                            onError={(e) => {
+                              e.target.style.display = 'none'
+                              e.target.parentElement.style.background = 'rgba(232,120,74,0.15)'
+                              e.target.parentElement.innerHTML = `<span style="color:#E8784A;font-size:11px;font-weight:700">${cert.org.slice(0,2).toUpperCase()}</span>`
+                            }}
+                          />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
                             <p className="text-white text-sm font-semibold group-hover:text-accent transition-colors">{cert.title}</p>
-                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-accent">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
                               <path d="M1 10L10 1M10 1H4M10 1V7" stroke="#E8784A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                           </div>
@@ -327,11 +333,16 @@ export default function About() {
                       </a>
                     ) : (
                       <div className="bg-bg-2 border border-white/[0.08] rounded-xl p-5 flex items-start gap-4">
-                        <div
-                          className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-bold text-sm"
-                          style={{ background: 'rgba(232,120,74,0.15)', color: '#E8784A' }}
-                        >
-                          {cert.year.slice(-2)}
+                        <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 overflow-hidden bg-white/[0.06]">
+                          <img
+                            src={cert.logo}
+                            alt={cert.org}
+                            className="w-7 h-7 object-contain"
+                            onError={(e) => {
+                              e.target.style.display = 'none'
+                              e.target.parentElement.innerHTML = `<span style="color:#E8784A;font-size:11px;font-weight:700">${cert.org.slice(0,2).toUpperCase()}</span>`
+                            }}
+                          />
                         </div>
                         <div>
                           <p className="text-white text-sm font-semibold">{cert.title}</p>
