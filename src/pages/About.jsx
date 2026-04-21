@@ -59,9 +59,66 @@ const skillCategories = [
 ]
 
 const certifications = [
-  { title: 'Google UX Design Professional Certificate', org: 'Google / Coursera', year: '2022' },
-  { title: 'UI / UX Design Specialization', org: 'California Institute of Arts / Coursera', year: '2021' },
-  { title: 'UX Design Fundamentals', org: 'Interaction Design Foundation', year: '2020' },
+  {
+    title: 'UX Advanced Nanodegree',
+    org: 'Udacity',
+    year: '2024',
+    link: 'https://www.udacity.com/course/ux-designer-nanodegree--nd578',
+  },
+  {
+    title: 'Google UX Design Specialization',
+    org: 'Google / Coursera',
+    year: '2023',
+    link: 'https://www.coursera.org/professional-certificates/google-ux-design',
+  },
+  {
+    title: 'Product Designer Certification',
+    org: 'Uxcel',
+    year: '2023',
+    link: 'https://uxcel.com/certifications/product-designer',
+  },
+  {
+    title: 'UX/UI Designer Certification',
+    org: 'Uxcel',
+    year: '2023',
+    link: 'https://uxcel.com/certifications/ux-ui-designer',
+  },
+  {
+    title: 'UX Writer Certification',
+    org: 'Uxcel',
+    year: '2023',
+    link: 'https://uxcel.com/certifications/ux-writer',
+  },
+  {
+    title: 'Product Discovery',
+    org: 'Uxcel',
+    year: '2022',
+    link: 'https://uxcel.com/',
+  },
+  {
+    title: 'Customer Experience Certification',
+    org: 'CX Academy',
+    year: '2023',
+    link: 'https://cxacademy.online/',
+  },
+  {
+    title: 'McKinsey Forward Program',
+    org: 'McKinsey & Company',
+    year: '2023',
+    link: 'https://www.mckinsey.com/forward/overview',
+  },
+  {
+    title: 'Product Strategy',
+    org: 'Product School',
+    year: '2022',
+    link: 'https://productschool.com/',
+  },
+  {
+    title: 'Effective Leadership',
+    org: 'HP Life',
+    year: '2022',
+    link: 'https://www.life-global.org/',
+  },
 ]
 
 export default function About() {
@@ -219,14 +276,16 @@ export default function About() {
             <AnimatedSection direction="left">
               <div className="section-label">Education</div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-8">Academic Background</h2>
-              <div className="bg-bg-2 border border-white/[0.08] rounded-2xl p-6 md:p-8">
-                <h3 className="text-white font-bold text-xl">Bachelor of Business Administration</h3>
-                <p className="text-accent text-sm font-semibold mt-1">Ain Shams University · Cairo, Egypt</p>
-                <p className="text-muted text-sm mt-4 leading-relaxed">
-                  Graduated with a solid foundation in business strategy, management, and organizational
-                  behaviour — skills that now inform my product thinking and ability to align design
-                  decisions with business objectives.
-                </p>
+              <div className="space-y-4">
+                <div className="bg-bg-2 border border-white/[0.08] rounded-2xl p-6 md:p-8">
+                  <h3 className="text-white font-bold text-xl">Bachelor of Management Information Systems</h3>
+                  <p className="text-accent text-sm font-semibold mt-1">Obour Higher Institute · Cairo, Egypt</p>
+                  <p className="text-muted text-sm mt-4 leading-relaxed">
+                    Studied management, databases, programming, and networking.
+                    Graduated cum laude each year — building a strong analytical foundation
+                    that shapes my data-informed approach to product design.
+                  </p>
+                </div>
               </div>
             </AnimatedSection>
 
@@ -241,19 +300,45 @@ export default function About() {
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.08 }}
-                    className="bg-bg-2 border border-white/[0.08] rounded-xl p-5 flex items-start gap-4"
+                    transition={{ delay: i * 0.06 }}
                   >
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-white font-bold text-sm"
-                      style={{ background: 'rgba(232,120,74,0.15)', color: '#E8784A' }}
-                    >
-                      {cert.year.slice(-2)}
-                    </div>
-                    <div>
-                      <p className="text-white text-sm font-semibold">{cert.title}</p>
-                      <p className="text-muted text-xs mt-0.5">{cert.org}</p>
-                    </div>
+                    {cert.link ? (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-bg-2 border border-white/[0.08] rounded-xl p-5 flex items-start gap-4 hover:border-accent/40 hover:bg-accent/[0.03] transition-all duration-200 group"
+                      >
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-bold text-sm"
+                          style={{ background: 'rgba(232,120,74,0.15)', color: '#E8784A' }}
+                        >
+                          {cert.year.slice(-2)}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2">
+                            <p className="text-white text-sm font-semibold group-hover:text-accent transition-colors">{cert.title}</p>
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" className="shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-accent">
+                              <path d="M1 10L10 1M10 1H4M10 1V7" stroke="#E8784A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
+                          <p className="text-muted text-xs mt-0.5">{cert.org}</p>
+                        </div>
+                      </a>
+                    ) : (
+                      <div className="bg-bg-2 border border-white/[0.08] rounded-xl p-5 flex items-start gap-4">
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 font-bold text-sm"
+                          style={{ background: 'rgba(232,120,74,0.15)', color: '#E8784A' }}
+                        >
+                          {cert.year.slice(-2)}
+                        </div>
+                        <div>
+                          <p className="text-white text-sm font-semibold">{cert.title}</p>
+                          <p className="text-muted text-xs mt-0.5">{cert.org}</p>
+                        </div>
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
