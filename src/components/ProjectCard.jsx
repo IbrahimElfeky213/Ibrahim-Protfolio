@@ -1,25 +1,32 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import useScrollReveal, { getRevealStyle } from '../hooks/useScrollReveal'
 
+/**
+ * ProjectCard — used in the Work page grid.
+ * Entrance animation powered by the native useScrollReveal hook.
+ * index prop controls the stagger delay between sibling cards.
+ */
 export default function ProjectCard({ project, index = 0 }) {
   const { slug, title, subtitle, tags, coverImage, color, accentColor, role, platform } = project
 
+  // Each card staggers by 80ms based on its grid position
+  const [ref, isVisible] = useScrollReveal({
+    delay: index * 80,
+    threshold: 0.08,
+    rootMargin: '0px 0px -50px 0px',
+  })
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+    <div
+      ref={ref}
+      style={getRevealStyle(isVisible, { distance: 30, duration: 600 })}
     >
       <Link to={`/projects/${slug}`} className="block group">
         <div className="card overflow-hidden">
           {/* Image / Cover */}
           <div
             className="relative w-full overflow-hidden"
-            style={{
-              background: color || '#111',
-              aspectRatio: '16/9',
-            }}
+            style={{ background: color || '#111', aspectRatio: '16/9' }}
           >
             {coverImage ? (
               <img
@@ -41,8 +48,10 @@ export default function ProjectCard({ project, index = 0 }) {
                 </span>
               </div>
             )}
-            {/* Overlay on hover */}
+
+            {/* Hover overlay */}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+
             {/* Arrow icon */}
             <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -69,6 +78,6 @@ export default function ProjectCard({ project, index = 0 }) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   )
 }
