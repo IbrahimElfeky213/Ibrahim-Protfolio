@@ -8,6 +8,7 @@ import About from './pages/About'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
 import ProjectDetail from './pages/projects/ProjectDetail'
+import EjarCaseStudy from './pages/projects/EjarCaseStudy'
 
 export default function App() {
   const location = useLocation()
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects/ejar" element={<EjarCaseStudy />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
         </Routes>
       </AnimatePresence>
